@@ -127,11 +127,11 @@ fi
 # Python virtualenv
 export WORKON_HOME=$HOME/code/.virtualenvs
 export PROJECT_HOME=$HOME/code
-export VIRTUALENVWRAPPER_SCRIPT=/home/qwertystop/.local/bin/virtualenvwrapper.sh
-source /home/qwertystop/.local/bin/virtualenvwrapper_lazy.sh
+export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper_lazy.sh
 
 
-. /home/qwertystop/torch/install/bin/torch-activate
+. $HOME/torch/install/bin/torch-activate
 
 
-. /home/qwertystop/torch-cl/install/bin/torch-activate
+. $HOME/torch-cl/install/bin/torch-activate
