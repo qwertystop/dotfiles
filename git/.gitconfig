@@ -1,0 +1,12 @@
+[user]
+	email = dheyman@fastmail.com
+	name = David Heyman
+
+[alias]
+	st = status -s
+	ci = commit
+	br = branch
+	co = checkout
+	cdiff = !git diff $@ | cdiff --side-by-side --width=0
+[push]
+	default = simple
