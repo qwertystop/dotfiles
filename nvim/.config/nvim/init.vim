@@ -6,8 +6,8 @@ Plug 'jreybert/vimagit'
 " VCS gutter
 Plug 'mhinz/vim-signify'
 " Elixir (alchemist)
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 " syntastic
 Plug 'vim-syntastic/syntastic'
 "Tree
@@ -33,6 +33,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
 " Elixir-specific
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
@@ -46,3 +47,5 @@ map <C-Down> <C-W><C-J>
 map <C-Up> <C-W><C-K>
 map <C-Right> <C-W><C-L>
 map <C-Left> <C-W><C-H>
+set splitbelow
+set splitright
