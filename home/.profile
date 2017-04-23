@@ -26,7 +26,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval `ssh-agent` 2>&1 >/dev/null
 
 
-. "$HOME/qwertystop/torch/install/bin/torch-activate"
+. "$HOME/torch/install/bin/torch-activate"
 
 . "$HOME/torch-cl/install/bin/torch-activate"
 
