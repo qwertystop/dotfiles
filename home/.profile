@@ -26,9 +26,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval `ssh-agent` 2>&1 >/dev/null
 
 
-. /home/qwertystop/torch/install/bin/torch-activate
+. "$HOME/qwertystop/torch/install/bin/torch-activate"
 
-. /home/qwertystop/torch-cl/install/bin/torch-activate
+. "$HOME/torch-cl/install/bin/torch-activate"
 
 # CS-Script
 export CSSCRIPT_DIR=/usr/share/CS-Script
