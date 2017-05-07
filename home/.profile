@@ -25,11 +25,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # ssh agent
 eval `ssh-agent` 2>&1 >/dev/null
 
-
-. "$HOME/torch/install/bin/torch-activate"
-
-. "$HOME/torch-cl/install/bin/torch-activate"
-
 # CS-Script
 export CSSCRIPT_DIR=/usr/share/CS-Script
 export PATH=$PATH:$CSSCRIPT_DIR
