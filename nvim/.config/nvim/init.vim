@@ -13,6 +13,11 @@ Plug 'vim-syntastic/syntastic'
 "Tree
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
+"Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" EasyMotion
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " NERDTree config:
@@ -44,11 +49,16 @@ let g:syntastic_python_checkers = ['flake8']
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Airline config
+let g:airline#extensions#tabline#enabled = 1
+
 " General config:
-"split navigations
+" split navigations
 map <C-Down> <C-W><C-J>
 map <C-Up> <C-W><C-K>
 map <C-Right> <C-W><C-L>
 map <C-Left> <C-W><C-H>
 set splitbelow
 set splitright
+" Leader key
+set showcmd
