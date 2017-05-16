@@ -62,3 +62,5 @@ set splitbelow
 set splitright
 " Leader key
 set showcmd
+" Exit terminal mode
+tnoremap <Esc> <C-\><C-n>
