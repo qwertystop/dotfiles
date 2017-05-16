@@ -8,5 +8,6 @@
 	br = branch
 	co = checkout
 	cdiff = !git diff $@ | cdiff --side-by-side --width=0
+	nb = checkout -b
 [push]
 	default = simple
