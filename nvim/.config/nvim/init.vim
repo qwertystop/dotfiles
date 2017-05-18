@@ -44,7 +44,7 @@ let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
 
 " Python-specific
-let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_checkers = ['pylint', 'pycodestyle', 'pydocstyle']
 
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
