@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
-"completion
+" Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 " Git commands
 Plug 'jreybert/vimagit'
 " VCS gutter
@@ -8,17 +9,31 @@ Plug 'mhinz/vim-signify'
 " Elixir (alchemist)
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
-" syntastic
+" Syntastic
 Plug 'vim-syntastic/syntastic'
-"Tree
+" NERDTree
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Solarized
+Plug 'altercation/vim-colors-solarized'
 " EasyMotion
 Plug 'easymotion/vim-easymotion'
+" Autoformat
+Plug 'Chiel92/vim-autoformat'
+" Folds
+Plug 'konfekt/fastfold'
+Plug 'tmhedberg/simpylfold'
 call plug#end()
+
+" Color scheme
+set background=dark
+colorscheme solarized
+
+" Autoformat
+noremap <F3> :Autoformat<CR>
 
 " NERDTree config:
 " Open tree on Ctrl-N
