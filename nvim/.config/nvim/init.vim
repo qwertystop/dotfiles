@@ -54,13 +54,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Elixir-specific
-let g:syntastic_elixir_checkers = ['elixir']
-let g:syntastic_enable_elixir_checker = 1
-
-" Python-specific
-let g:syntastic_python_checkers = ['pylint', 'pycodestyle', 'pydocstyle']
-
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
 
@@ -75,7 +68,8 @@ map <C-Right> <C-W><C-L>
 map <C-Left> <C-W><C-H>
 set splitbelow
 set splitright
-" Leader key
+" Leader key indicated in corner when active
 set showcmd
 " Exit terminal mode
 tnoremap <Esc> <C-\><C-n>
+
