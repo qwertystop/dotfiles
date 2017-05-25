@@ -21,8 +21,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 " EasyMotion
 Plug 'easymotion/vim-easymotion'
-" Autoformat
-Plug 'Chiel92/vim-autoformat'
 " Folds
 Plug 'konfekt/fastfold'
 Plug 'tmhedberg/simpylfold'
@@ -31,9 +29,6 @@ call plug#end()
 " Color scheme
 set background=dark
 colorscheme solarized
-
-" Autoformat
-noremap <F3> :Autoformat<CR>
 
 " NERDTree config:
 " Open tree on Ctrl-N
