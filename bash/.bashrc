@@ -129,9 +129,3 @@ export WORKON_HOME=$HOME/code/.virtualenvs
 export PROJECT_HOME=$HOME/code
 export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
 source $HOME/.local/bin/virtualenvwrapper_lazy.sh
-
-
-. $HOME/torch/install/bin/torch-activate
-
-
-. $HOME/torch-cl/install/bin/torch-activate
