@@ -24,6 +24,8 @@ Plug 'easymotion/vim-easymotion'
 " Folds
 Plug 'konfekt/fastfold'
 Plug 'tmhedberg/simpylfold'
+" Undo tree visualizer
+Plug 'mbbill/undotree'
 call plug#end()
 
 " Color scheme
@@ -55,6 +57,11 @@ let g:deoplete#enable_at_startup = 1
 " Airline config
 let g:airline#extensions#tabline#enabled = 1
 
+" Undotree config
+let g:undotree_WindowLayout = 3
+let g:undotree_ShortIndicators = 1
+
+
 " General config:
 " split navigations
 map <C-Down> <C-W><C-J>
@@ -67,4 +74,5 @@ set splitright
 set showcmd
 " Exit terminal mode
 tnoremap <Esc> <C-\><C-n>
-
+" Undo persistence
+set undofile
