@@ -26,6 +26,13 @@ Plug 'konfekt/fastfold'
 Plug 'tmhedberg/simpylfold'
 " Undo tree visualizer
 Plug 'mbbill/undotree'
+" Text objects
+" , for CamelCase and snake_case individual words
+Plug 'bkad/CamelCaseMotion'
+" a for arguments
+Plug 'vim-scripts/argtextobj.vim'
+" i for same-indent blocks
+Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
 
 " Color scheme
