@@ -33,6 +33,8 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'vim-scripts/argtextobj.vim'
 " i for same-indent blocks
 Plug 'michaeljsmith/vim-indent-object'
+" Structure display
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 " Color scheme
