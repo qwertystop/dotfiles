@@ -10,7 +10,9 @@ Plug 'mhinz/vim-signify'
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 " Syntastic
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
+" neomake
+Plug 'neomake/neomake'
 " NERDTree
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -27,14 +29,9 @@ Plug 'tmhedberg/simpylfold'
 " Undo tree visualizer
 Plug 'mbbill/undotree'
 " Text objects
-" , for CamelCase and snake_case individual words
-Plug 'bkad/CamelCaseMotion'
-" a for arguments
 Plug 'vim-scripts/argtextobj.vim'
 " i for same-indent blocks
 Plug 'michaeljsmith/vim-indent-object'
-" Structure display
-Plug 'majutsushi/tagbar'
 call plug#end()
 
 " Color scheme
@@ -52,14 +49,17 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if (argc() == 0 && !exists("s:std_in")) | NERDTree | endif
 
 " Syntastic setup
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_aggregate_errors = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+" Neomake setup
+autocmd! BufWritePost * Neomake
 
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
