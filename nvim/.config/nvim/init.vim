@@ -9,10 +9,12 @@ Plug 'mhinz/vim-signify'
 " Elixir (alchemist)
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
-" Syntastic
-"Plug 'vim-syntastic/syntastic'
+" Lua
+Plug 'tbastos/vim-lua'
 " neomake
-Plug 'neomake/neomake'
+" Plug 'neomake/neomake'
+" Async lint engine
+Plug 'w0rp/ale'
 " NERDTree
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -48,18 +50,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if (argc() == 0 && !exists("s:std_in")) | NERDTree | endif
 
-" Syntastic setup
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_aggregate_errors = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
 " Neomake setup
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
+
+" ALE setup
+let g:ale_fix_on_save = 1
 
 "enable deoplete
 let g:deoplete#enable_at_startup = 1
