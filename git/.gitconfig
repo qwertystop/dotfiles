@@ -14,3 +14,5 @@
 	last = log -l HEAD
 [push]
 	default = simple
+[diff]
+	renames = true
