@@ -11,8 +11,6 @@ Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 " Lua
 Plug 'tbastos/vim-lua'
-" neomake
-" Plug 'neomake/neomake'
 " Async lint engine
 Plug 'w0rp/ale'
 " NERDTree
