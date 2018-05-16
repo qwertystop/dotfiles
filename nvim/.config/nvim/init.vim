@@ -10,7 +10,11 @@ Plug 'mhinz/vim-signify'
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 " Lua
-Plug 'tbastos/vim-lua'
+Plug 'tbastos/vim-lua', {'for': 'lua'}
+" Scala
+Plug 'ensime/ensime-vim', { 'for': 'scala', 'do': ':UpdateRemotePlugins' }
+" neomake
+" Plug 'neomake/neomake'
 " Async lint engine
 Plug 'w0rp/ale'
 " NERDTree
@@ -25,7 +29,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 " Folds
 Plug 'konfekt/fastfold'
-Plug 'tmhedberg/simpylfold'
+Plug 'tmhedberg/simpylfold', {'for': 'python'}
 " Undo tree visualizer
 Plug 'mbbill/undotree'
 " Text objects
@@ -46,10 +50,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Open tree if nvim opened with no args
 " Can't seem to make it work if opened with directory
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if (argc() == 0 && !exists("s:std_in")) | NERDTree | endif
-
-" Neomake setup
-" autocmd! BufWritePost * Neomake
+autocmd VimEnter * if (argc() == 0 && !exists("s:std_in")) | NERDTreeToggle | endif
 
 " ALE setup
 let g:ale_fix_on_save = 1
@@ -63,7 +64,6 @@ let g:airline#extensions#tabline#enabled = 1
 " Undotree config
 let g:undotree_WindowLayout = 3
 let g:undotree_ShortIndicators = 1
-
 
 " General config:
 " split navigations

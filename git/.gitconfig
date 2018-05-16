@@ -16,3 +16,7 @@
 	default = simple
 [diff]
 	renames = true
+[core]
+	editor = nvim
+[merge]
+	conflictstyle = diff3
