@@ -1,20 +1,26 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+Plug 'Shougo/neco-syntax' " Gets some completion entries from syntax-highlight files
+Plug 'Shougo/neosnippet.vim' " snippet inserter integrated with deoplete
+Plug 'Shougo/neosnippet-snippets' " snippet library for neosnippet, many langs
 " Git commands
 Plug 'jreybert/vimagit'
 " VCS gutter
 Plug 'mhinz/vim-signify'
 " Elixir (alchemist)
-Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
-Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'} " dependency of alchemist
+Plug 'slashmili/alchemist.vim', {'for': 'elixir'} " IDE-ish
 " Lua
 Plug 'tbastos/vim-lua', {'for': 'lua'}
+Plug 'davisdude/vim-love-docs', {'branch': 'build', 'for': 'lua'}
+" Python
+Plug 'zchee/deoplete-jedi', {'for': 'python'} " autocompletion
+Plug 'tmhedberg/simpylfold', {'for': 'python'} " folding Python blocks
 " Scala
 Plug 'ensime/ensime-vim', { 'for': 'scala', 'do': ':UpdateRemotePlugins' }
-" neomake
-" Plug 'neomake/neomake'
+" Lisp
+Plug 'l04m33/vlime', { 'rtp': 'vim/' }
 " Async lint engine
 Plug 'w0rp/ale'
 " NERDTree
@@ -29,10 +35,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 " Folds
 Plug 'konfekt/fastfold'
-Plug 'tmhedberg/simpylfold', {'for': 'python'}
 " Undo tree visualizer
 Plug 'mbbill/undotree'
 " Text objects
+" a for argument
 Plug 'vim-scripts/argtextobj.vim'
 " i for same-indent blocks
 Plug 'michaeljsmith/vim-indent-object'
@@ -47,10 +53,6 @@ colorscheme solarized
 map <C-n> :NERDTreeToggle<CR>
 " Close nvim if tree is the only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Open tree if nvim opened with no args
-" Can't seem to make it work if opened with directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if (argc() == 0 && !exists("s:std_in")) | NERDTreeToggle | endif
 
 " ALE setup
 let g:ale_fix_on_save = 1
