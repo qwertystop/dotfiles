@@ -1,3 +1,3 @@
-"let g:syntastic_elixir_checkers = ['elixir']
-"let g:syntastic_enable_elixir_checker = 1
-
+"autocmd BufWritePost *.exs,*.ex silent :!mix format %
+let g:alchemist_tag_disable = 1
+let g:mix_format_on_save = 1
