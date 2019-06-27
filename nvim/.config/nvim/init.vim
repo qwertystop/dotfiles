@@ -2,7 +2,36 @@
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
-" Visual things
+" Completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax' " Gets some completion entries from syntax-highlight files
+Plug 'Shougo/neosnippet.vim' " snippet inserter integrated with deoplete
+Plug 'Shougo/neosnippet-snippets' " snippet library for neosnippet, many langs
+" Git commands
+Plug 'jreybert/vimagit'
+" VCS gutter
+Plug 'mhinz/vim-signify'
+" Elixir (alchemist)
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'} " dependency of alchemist
+Plug 'slashmili/alchemist.vim', {'for': 'elixir'} " IDE-ish
+" Lua
+Plug 'tbastos/vim-lua', {'for': 'lua'}
+Plug 'davisdude/vim-love-docs', {'branch': 'build', 'for': 'lua'}
+" Python
+Plug 'zchee/deoplete-jedi', {'for': 'python'} " autocompletion
+Plug 'tmhedberg/simpylfold', {'for': 'python'} " folding Python blocks
+" Scala
+Plug 'ensime/ensime-vim', { 'for': 'scala', 'do': ':UpdateRemotePlugins' }
+" Lisp
+Plug 'kovisoft/slimv'
+" Async lint engine
+Plug 'w0rp/ale'
+" NERDTree
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+"Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Solarized
 Plug 'altercation/vim-colors-solarized'
 " Show indent levels
