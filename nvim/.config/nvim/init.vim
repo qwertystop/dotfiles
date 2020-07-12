@@ -20,12 +20,8 @@ Plug 'davisdude/vim-love-docs', {'branch': 'build', 'for': 'lua'}
 " Python
 Plug 'zchee/deoplete-jedi', {'for': 'python'} " autocompletion
 Plug 'tmhedberg/simpylfold', {'for': 'python'} " folding Python blocks
-" Scala
-Plug 'ensime/ensime-vim', { 'for': 'scala', 'do': ':UpdateRemotePlugins' }
 " Lisp
 Plug 'kovisoft/slimv'
-" Async lint engine
-Plug 'w0rp/ale'
 " NERDTree
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -67,9 +63,6 @@ Plug 'kshenoy/vim-signature'
 " NERDTree
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Vlime
-"Plug 'l04m33/vlime', {'rtp': 'vim/'}
-Plug 'kovisoft/slimv'
 " Git commands
 Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
@@ -98,8 +91,8 @@ set background=dark
 colorscheme solarized
 
 " Hook up python
-let g:python_host_prog = '/Users/dheyman/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/dheyman/.pyenv/versions/neovim3/bin/python'
+"let g:python_host_prog = '/Users/dheyman/.pyenv/versions/neovim2/bin/python'
+"let g:python3_host_prog = '/Users/dheyman/.pyenv/versions/neovim3/bin/python'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
@@ -129,6 +122,12 @@ set showcmd
 tnoremap <Esc> <C-\><C-n>
 " Undo persistence
 set undofile
+
+" Menus!
+source $VIMRUNTIME/menu.vim
+set wildmenu
+set wcm=<C-Z>
+map <F4> :emenu <C-Z>
 
 let g:lightline = {     
       \ 'active': {
