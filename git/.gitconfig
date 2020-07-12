@@ -1,6 +1,6 @@
 [user]
-	email = qwertystop+git@fastmail.com
-	name = David Heyman
+	email = qwertystop@users.noreply.github.com
+	name = Vivian Heyman
 
 [alias]
 	st = status -s
@@ -20,3 +20,5 @@
 	editor = nvim
 [merge]
 	conflictstyle = diff3
+[pull]
+	ff = only
