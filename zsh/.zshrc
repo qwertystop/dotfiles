@@ -59,7 +59,7 @@ bindkey -v
 
 eval $(keychain --eval --quiet id_ed25519 --noask)
 
-PATH=$PATH:/home/qwertystop/.local/bin
+PATH=/home/qwertystop/.local/bin:$PATH
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
