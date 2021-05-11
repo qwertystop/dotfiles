@@ -18,13 +18,3 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
-# Cargo, for... Rust, I think
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# ssh agent
-eval `ssh-agent` 2>&1 >/dev/null
-
-# CS-Script
-export CSSCRIPT_DIR=/usr/share/CS-Script
-export PATH=$PATH:$CSSCRIPT_DIR

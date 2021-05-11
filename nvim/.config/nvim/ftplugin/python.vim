@@ -19,14 +19,14 @@ setlocal expandtab
 
 set autoread
 
-let g:neomake_python_enabled_makers = ['python', 'mypy', 'yapf', 'isort', 'pylint']
+let g:neomake_python_enabled_makers = ['python', 'black', 'isort', 'mypy', 'pylint']
 
 let g:neomake_python_isort_maker = {
-	\ 'args': ['-y'],
-	\ 'exe': 'isort'
+	\ 'exe': 'isort',
+	\ 'args': '-q'
 	\ }
 
-let g:neomake_python_yapf_maker = {
-	\ 'args': ['-i'],
-	\ 'exe': 'yapf'
-	\ }
+let g:neomake_python_black_maker = {
+	\ 'exe': 'black',
+	\ 'args': '-q'
+	\	}

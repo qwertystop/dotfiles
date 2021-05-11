@@ -35,11 +35,18 @@ zstyle ':vcs_info:git*' formats "%F{blue}%b%f %u%c"
 _setup_ps1() {
   vcs_info
   GLYPH="▲"
+  # Vi insert mode or vi normal mode
   [ "x$KEYMAP" = "xvicmd" ] && GLYPH="▼"
-  PS1=" %(?.%F{blue}.%F{red})$GLYPH%f %(1j.%F{cyan}[%j]%f .)%F{blue}%~%f %(!.%F{red}#%f .)"
+  # Red or blue depending on success of prior command
+  GLYPHPROMPT="%(?.%F{blue}.%F{red})$GLYPH%f"
+  # Truncate three or more directories to last two
+  # (strict length rather than dir count also an option)
+  DIRPROMPT="%F{blue}%(3~|…/%2~|%~)%f"
+  # Not sure what the other two bits do, haven't seen them turn up.
+  PS1="$GLYPHPROMPT %(1j.%F{cyan}[%j]%f .)$DIRPROMPT %(!.%F{red}#%f .)"
   PYVER="$(pyenv version-name)"
   if [[ "$PYVER" != "system" ]]; then
-    PS1="($PYVER)"$PS1
+    PS1="($PYVER) $PS1"
   fi
   RPROMPT="$vcs_info_msg_0_"
 }
@@ -55,11 +62,15 @@ zle-line-init () {
   zle -K viins
 }
 zle -N zle-line-init
-bindkey -v
+
+
+bindkey '^R' history-incremental-search-backward
 
 eval $(keychain --eval --quiet id_ed25519 --noask)
 
-PATH=/home/qwertystop/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
+eval $(thefuck --alias ff)
